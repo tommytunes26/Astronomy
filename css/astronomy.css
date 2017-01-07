@@ -1,0 +1,332 @@
+body {
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+	background: url("../pics/milkyway.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    height: 100%;
+}
+
+h1 {	
+    font-family: calibri;
+    font-size: 20pt;
+}
+
+h2 {
+	font-family: calibri;
+    font-size: 18pt;
+}
+
+h3 {
+    font-family: calibri;
+    font-size: 30pt;
+    text-align: right;
+    margin-bottom: 0;
+    padding-bottom: 0;    
+}
+
+p {
+    font-family: calibri;
+    color: #fff;
+    text-align: justify;
+}
+
+a, 
+a:visited,
+a:link,
+a:active {
+    text-decoration: inherit;
+    color: inherit;
+}
+a:hover {
+    color: #1585cb;
+}
+
+/*Media width properties-------*/
+
+@media screen and (max-width: 810px){
+    
+    .carouselbox {
+        position: relative;
+        width: 80% !important;
+    }
+    
+    li img {
+        position: absolute;
+        left: 50%;
+        margin-left: -400px
+    }
+    
+    .menu-title {
+        margin-right: 5% !important;
+        padding-right: 0 !important;
+    }
+    
+}
+
+/*Media width Mobile----------*/
+@media screen and (max-width: 660px){
+    
+    .menu-sel {
+        visibility: collapse;
+    }
+    
+}
+
+/*Media width Mobile----------*/
+@media screen and (max-width: 500px){
+    
+    .placement {
+        top: 100px !important;
+    }
+    
+}
+
+
+/* Classes ----------------------------------- */
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.placement {
+    position: absolute;
+    top: calc(100% / 2.8);
+    left: 0;
+    right: 0;
+    margin: -15% 0 0 0;
+}
+
+.carouselbox {
+    position: relative;
+    width: 800px;
+    margin: 10px;
+    border: 10px solid #fff;
+    box-shadow: 2px 2px 20px #111;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+	margin: 0;
+    padding: 0;
+}
+
+.content li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.footer {
+	width: 100%;
+	min-width: 325px;
+	background-color: #fff;
+    margin-right: auto;
+	margin-left: auto;
+    position: absolute;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 5px;
+    box-shadow: 0 0 20px #111;
+    z-index: 10;
+}
+
+.holder {
+    position: relative;
+    width: 100%;
+	min-width: 800px;
+    max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+    margin-bottom: 5px;
+}
+
+.nav-bar {
+	width: 100%;
+	min-width: 800px;
+	background-color: #fff;
+    margin-right: auto;
+	margin-left: auto;
+    position: absolute;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px #111;
+    z-index: 10;
+}
+
+.menu-title {
+	float: left;
+	margin-right: auto;
+	margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+	padding-right: 20%;
+}
+
+.menu-sel {
+	float: left;
+    padding-right: 3%;
+    padding-left: 3%;
+	margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumb {
+    width: 200px;
+    border: 10px solid #fff;
+    box-shadow: 2px 2px 20px #111;
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.info {
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;        
+    min-width: 325px;
+    background-color: hsla(212, 0%, 35%, 0.61);
+    box-shadow: 2px 2px 20px #111;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.back {
+    padding-left: 10px;
+}
+
+.space-bottom {
+    margin-bottom: 300px;
+}
+
+.space-top {
+    margin-top: 100px;
+}
+
+.spacer {
+    width:100%;
+    padding-top: 10px;
+    top: 10%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Carousel ------------------------------------*/
+
+.active {
+    height: 409px;
+}
+
+.active li {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(1);
+    transition: 1s;
+}
+
+.active li.current {
+    top: 0px;
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+}
+
+button {
+    float:left;    
+    margin-right: 5px;
+}
+
+.active .buttons {
+    padding: 5px;
+    z-index: 10;
+    position: absolute;
+    top: 370px;
+    left: 10px;
+    
+}
+.carouselbox button {
+    border: none;
+    display: none;
+}
+.active button {
+    display: block;
+} 
+.offscreen {
+    position: absolute;
+    left: -2000px;
+}
+
+.li img {
+    display: block;
+}
+
+/* IDs ----------------------------------------- */
+
+#mars {
+	color: red;
+}
+
+#pluto {
+	color: #4fd8d6;
+}
+
+#saturn {
+	color: #e3c568;
+}
+
+#nebulas {
+	color: green;
+}
+
+#replace {
+    position: absolute;
+    left: 40px;
+}
+
+#animate {
+    position: absolute;
+    color: #1585cb;
+    left: 151px;
+}
+
+#menu {
+    position: absolute;
+    position: fixed;
+    display: none;
+    color: #1585cb;
+    right: 30px;
+    bottom: 8px;
+    text-shadow: 0 0 10px #42708d;
+}
